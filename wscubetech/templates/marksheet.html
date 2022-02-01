@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <!-- start contact Area -->		
+			<section class="contact-area section-gap" id="contact">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Calculator</h1>
+					
+							</div>
+						</div>
+					</div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <form action="" method="post">
+                                {% csrf_token %}
+
+                                <label>Subject 1</label>
+                                <input type="text" name="subject1" class="form-control" id="">
+
+                                <label>Subject 2</label>
+                                <input type="text" name="subject2" class="form-control" id="">
+
+                                <label>Subject 3</label>
+                                <input type="text" name="subject3" class="form-control" id="">
+
+                                <label>Subject 4</label>
+                                <input type="text" name="subject4" class="form-control" id="">
+
+                                <label>Subject 5</label>
+                                <input type="text" name="subject5" class="form-control" id="">
+
+                                <div class="pt-2">
+                                    <button type="submit">Marksheet</button>
+                                </div>
+                                
+                                </br>
+                                <label>Total</label>
+                                <input type="text" value="{{total}}" name="" id="" class="form-control">
+
+                                </br>
+                                <label>Percentage</label>
+                                <input type="text" value="{{percentage}}" name="" id="" class="form-control">
+
+                                </br>
+                                <label>Division</label>
+                                <input type="text" value="{{division}}" name="" id="" class="form-control">
+
+                            </form>
+                        </div>
+                    </div>    
+                </div>
+            </section>
+    <!-- End contact Area -->
+{% endblock content %}

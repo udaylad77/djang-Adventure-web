@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+	{% load static %}
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="/static/img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Adventure</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="/static/css/linearicons.css">
+			<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+			<link rel="stylesheet" href="/static/css/bootstrap.css">
+			<link rel="stylesheet" href="/static/css/magnific-popup.css">
+			<link rel="stylesheet" href="/static/css/animate.min.css">
+			<link rel="stylesheet" href="/static/css/owl.carousel.css">
+			<link rel="stylesheet" href="/static/css/main.css">
+		</head>
+		<body>
+			<!-- start banner Area -->
+			<section class="banner-area" id="home">
+				<div id="undefined-sticky-wrapper" class="sticky-wrapper is-sticky" style="height: 86px;">
+				<!-- Start Header Area -->
+				<header class="default-header" style="width: 1349px; position: fixed; top: 0px;">
+					<nav class="navbar navbar-expand-lg  navbar-light">
+						<div class="container">
+							  <!-- <a class="navbar-brand" href="index.html"> -->
+								<a class="navbar-brand" href="{% url 'homePage' %}">
+							  	<img src="/static/img/logo.png" alt="">
+							  </a>
+							  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							    <span class="text-white lnr lnr-menu"></span>
+							  </button>
+
+							  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+							    <ul class="navbar-nav">
+									<!-- {{request.path}} -->
+									<li class="{% if request.path == '/' %} active {% endif %}"><a href="/">Home</a></li>
+									<!-- <li><a href="{% url 'about' %}">About Us</a></li> -->
+												<!-- OR -->
+									<li class="{% if request.path == '/about-us/' %} active {% endif %}"><a href="/about-us">About Us</a></li>									
+									<li class="{% if request.path == '/service/' %} active {% endif %}"><a href="{% url 'service' %}">Service</a></li>
+									{% url 'gallery' as pictures %}
+									<li class="{% if request.path == '/gallery/' %} active {% endif %}"><a href="{{pictures}}">Gallery</a></li>
+									<li class="{% if request.path == '/faq/' %} active {% endif %}"><a href="{% url 'faq' %}">Faq</a></li>
+									<li class="{% if request.path == '/contact/' %} active {% endif %}"><a href="{% url 'contact' %}">Contact</a></li>
+									<li class="{% if request.path == '/userform/' %} active {% endif %}"><a href="{% url 'userform' %}">User Form</a></li>
+									<li class="{% if request.path == '/calculator/' %} active {% endif %}"><a href="{% url 'calculator' %}">Calculator</a></li>
+									<!-- Dropdown -->
+								    <li class="dropdown">
+								      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+								        Pages
+								      </a>
+								      <div class="dropdown-menu">
+								        <a class="dropdown-item" href="{% url 'generic' %}">Generic</a>
+								        <a class="dropdown-item" href="{% url 'elements' %}">Elements</a>
+								      </div>
+								    </li>
+							    </ul>
+							  </div>						
+						</div>
+					</nav>
+				</header>
+				<!-- End Header Area -->
+			</div>				
+			</section>

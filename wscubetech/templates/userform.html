@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <!-- start contact Area -->		
+			<section class="contact-area section-gap" id="contact">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">User Form</h1>
+					
+							</div>
+						</div>
+					</div>
+
+                    <div class="row">
+                        <div class="col-12">
+
+                            <!-- GET -->
+                            <!-- <form>
+                                <div>
+                                    <label for="">Value1</label>
+                                    <input class="form-control" type="text" name="num1" id="">
+                                </div>
+
+                                <div>
+                                    <label for="">Value2</label>
+                                    <input class="form-control" type="text" name="num2" id="">
+                                </div>
+
+                                <div class="pt-2">
+                                    <button type="submit">Save</button>
+                                </div>
+                                Output
+                                <input type="text" value="{{output}}" name="" id="">
+                            </form> -->
+
+                            <!-- POST -->
+                            <!-- <form method="POST">
+                                {% csrf_token %}
+                                <div>
+                                    <label for="">Value1</label>
+                                    <input class="form-control" type="text" name="num1" value="{{n1}}" id="">
+                                </div>
+
+                                <div>
+                                    <label for="">Value2</label>
+                                    <input class="form-control" type="text" name="num2" value="{{n2}}" id="">
+                                </div>
+
+                                <div class="pt-2">
+                                    <button type="submit">Save</button>
+                                </div>
+                                Output
+                                <input type="text" value="{{output}}" name="" id="">
+                            </form> -->
+
+                            <!-- POST with Action -->
+                            <!-- <form method="POST" action="{% url 'submitform' %}">
+                                {% csrf_token %}
+                                <div>
+                                    <label for="">Value1</label>
+                                    <input class="form-control" type="text" name="num1" value="{{n1}}" id="">
+                                </div>
+
+                                <div>
+                                    <label for="">Value2</label>
+                                    <input class="form-control" type="text" name="num2" value="{{n2}}" id="">
+                                </div>
+
+                                <div class="pt-2">
+                                    <button type="submit">Save</button>
+                                </div>
+                                Output
+                                <input type="text" value="{{output}}" name="" id="">
+                            </form> -->
+
+                            <!-- Form Tutorial -->
+                            <form method="POST" action="{% url 'submitform' %}">
+                                {% csrf_token %}
+                                {{form}} <!-- Key Name -->
+
+                                <div class="pt-2">
+                                    <button type="submit">Save</button>
+                                </div>
+                                Output
+                                <input type="text" value="{{output}}" name="" id="">
+                            </form>
+
+                        </div>
+                    </div>    
+
+                </div>
+            </section>
+    <!-- End contact Area -->
+{% endblock content %}

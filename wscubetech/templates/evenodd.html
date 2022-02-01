@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <!-- start contact Area -->		
+			<section class="contact-area section-gap" id="contact">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Calculator</h1>
+					
+							</div>
+						</div>
+					</div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <form action="" method="post">
+                                
+                                {% if error %}
+                                <div class="alert alert-danger" role="alert">
+                                    Please Enter The Value
+                                </div>
+                                {% endif %}
+
+                                {% csrf_token %}
+
+                                <label>Value 1</label>
+                                <input type="text" name="num1" class="form-control" id="">
+
+                                <div class="pt-2">
+                                    <button type="submit">Even | Odd</button>
+                                </div>
+                                
+                                </br>
+                                <label>Output</label>
+                                <input type="text" value="{{c}}" name="" id="" class="form-control">
+
+                            </form>
+                        </div>
+                    </div>    
+                </div>
+            </section>
+    <!-- End contact Area -->
+{% endblock content %}
